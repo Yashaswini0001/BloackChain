@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academic Records</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4682b4;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #5f9ea0;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin: 5px 0;
+            display: block;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: #4682b4;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #5f9ea0;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        #error {
+            color: red;
+            font-weight: bold;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Academic Records</h1>
+    <div>
+        <h2>Create Record</h2>
+        <label for="recordId">Record ID:</label>
+        <input type="text" id="recordId">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName">
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade"><br>
+        <button onclick="createRecord()">Create</button>
+    </div>
+    <div>
+        <h2>Get Record</h2>
+        <label for="queryId">Record ID:</label>
+        <input type="text" id="queryId">
+        <button onclick="getRecord()">Get</button>
+        <p id="result"></p>
+    </div>
+    <div>
+        <button onclick="window.location.href='allRecords.html'">Go to All Records</button>
+    </div>
+    <div>
+        <p id="error"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
